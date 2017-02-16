@@ -73,6 +73,7 @@ router.post('/', function(req, res) {
           extrav : response['personality'][2].percentile,
           agreeb : response['personality'][3].percentile,
           emrang : response['personality'][4].percentile
+          
           //resp: JSON.stringify(response, null, 2)
         });
         //console.log(JSON.stringify(response, null, 2));

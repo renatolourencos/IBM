@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/renatolourencos/IBM-Teste.git"
+    "url": "git+https://github.com/renatolourencos/IBM.git"
   },
   "author": "renatoloutencos",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/renatolourencos/IBM-Teste/issues"
+    "url": "https://github.com/renatolourencos/IBM/issues"
   },
-  "homepage": "https://github.com/renatolourencos/IBM-Teste#readme",
+  "homepage": "https://github.com/renatolourencos/IBM#readme",
   "dependencies": {
     "body-parser": "~1.16.0",
     "cookie-parser": "~1.4.3",
