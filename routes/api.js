@@ -18,7 +18,7 @@ router.get('/in', function(req, res, next) {
         console.log('error:', err);
       } else {
         res.render('api', {
-          title: 'API',
+          title: 'Watson Analisis',
           resp: JSON.stringify(response, null, 2)
         });
         //console.log(JSON.stringify(response, null, 2));
@@ -30,7 +30,7 @@ router.get('/in', function(req, res, next) {
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('api', {
-    title: 'API'
+    title: 'Watson Analisis'
   });
 });
 
@@ -45,14 +45,7 @@ router.post('/', function(req, res) {
           res.render('api', { title: 'ERRO'});
       } else {
         res.render('api', {
-          title: 'Analisis',/*
-          opCh : response['personality'][0]['children'],
-          openess : response['personality'][0].percentile,
-          conscient : response['personality'][1].percentile,
-          extrav : response['personality'][2].percentile,
-          agreeb : response['personality'][3].percentile,
-          emrang : response['personality'][4].percentile
-          */
+          title: 'Watson Analisis',
           //resp: JSON.stringify(response, null, 2),
           personality: response['personality']
         });
