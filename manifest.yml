@@ -1,0 +1,11 @@
+declarete-services:
+  redis-chatter:
+    label: rediscloud
+    plan: 100mb
+
+aplications:
+- name: IBM
+  memory: 500mb
+  command: node app.js
+  services:
+  - redis-chatter
