@@ -8,6 +8,10 @@ var bodyParser = require('body-parser');
 var index = require('./routes/index');
 var users = require('./routes/users');
 var api = require('./routes/api');
+var hbs = require('hbs');
+hbs.registerHelper('formatInt', function(value) {
+    return Math.round(value*100);
+});
 
 var app = express();
 

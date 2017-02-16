@@ -8,28 +8,6 @@ var personality_insights = new PersonalityInsightsV3({
   version_date: '2016-10-19'
 });
 
-/*
- * Spanish example:
- *   'language' parameter is needed in 'es' since our
- *   text content is in Spanish.
- */
-/*
-personality_insights.profile(
-  {
-    text: 'Ingrese un texto de más de 100 palabras aquí...',
-    headers: { 'Content-Language': 'es' }
-  },
-  function(err, response) {
-    if (err) {
-      console.log('error:', err);
-    } else {
-      console.log(JSON.stringify(response, null, 2));
-    }
-  }
-);
-*/
-
-
 /* GET home page. */
 router.get('/in', function(req, res, next) {
   personality_insights.profile({
@@ -67,14 +45,16 @@ router.post('/', function(req, res) {
           res.render('api', { title: 'ERRO'});
       } else {
         res.render('api', {
-          title: 'Analisis',
+          title: 'Analisis',/*
+          opCh : response['personality'][0]['children'],
           openess : response['personality'][0].percentile,
           conscient : response['personality'][1].percentile,
           extrav : response['personality'][2].percentile,
           agreeb : response['personality'][3].percentile,
           emrang : response['personality'][4].percentile
-          
-          //resp: JSON.stringify(response, null, 2)
+          */
+          //resp: JSON.stringify(response, null, 2),
+          personality: response['personality']
         });
         //console.log(JSON.stringify(response, null, 2));
       }

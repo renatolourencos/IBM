@@ -1,23 +1,34 @@
 <h1>{{title}}</h1>
 <p>TESTE to {{title}}</p>
 
-<p></p>
-<p></p>
-<p></p>
-<p></p>
-<p></p>
-
+{{#if personality}}
 <table class="table table-striped table-inverse">
   <thead>
     <tr>
-      <th>#</th>
       <th>Name</th>
       <th>Percentage</th>
       <th>Details</th>
     </tr>
   </thead>
-  
+
   <tbody>
+    {{#each personality}}
+    <tr>
+    <td>{{name}}</td>
+    <td>{{formatInt percentile}}</td>
+    <td>
+    <table>
+      {{#each children}}
+        <tr>
+          <td>{{name}}</td>
+          <td>{{formatInt percentile}}</td>
+        </tr>
+      {{/each}}
+      </table>
+    </td>
+    </tr>
+    {{/each}}
+    <!--
     <tr>
       <th scope="row">1</th>
       <td>Openness</td>
@@ -47,10 +58,10 @@
       <td>Emotional Range</td>
       <td>{{emrang}}</td>
       <td>@twitter</td>
-    </tr>
+    </tr>-->
   </tbody>
 </table>
-
+{{/if}}
 
 <form action="/app/" method="post">
   Resume:<br>
@@ -58,7 +69,4 @@
 
   <br><br>
   <input type="submit" value="Submit">
-</form> 
-
-
-<p>{{resp}}</p>
+</form>
